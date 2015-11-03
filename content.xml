@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="slides">
+    <section id="opener">
+        <h1>SAP PI - How We Work</h1>
+        <h3>SAUG Melbourne Conference 2015</h3>
+        <p>
+            <small><a href="http://about.sufw.me">Sascha Wenninger</a> (<a href="http://twitter.com/sufw">@sufw</a>)</small>
+        </p>
+        <img src="img/Blue_T_3D.png"/>
+        <img src="img/SAUG.png" width="320px"/>
+    </section>
+    
+    
+    
+    <section id="lean">
+        
+    </section>
+    
+    
+    
+    <section id="innovationTokens">
+        
+    </section>
+    
+    
+    
+    <section id="schemas">
+        
+    </section>
+    
+    
+    
+    <section id="mappings">
+        <section>
+            <h2>XSLT</h2>
+        </section>
+        
+        <section>
+            <h2>Why?</h2>
+        </section>
+        
+        <section>
+            <h2>XSLT 2.0</h2>
+        </section>
+        
+        
+    </section>
+    
+    
+    
+    <section id="sourceControl">
+        <h2>Source Control</h2>
+    </section>
+    
+
+
+    <section id="alerting">
+        <section data-background="img/SafetyFirst.jpg">
+            <h2>Alerting</h2>
+        </section>
+        
+        
+        <section>
+            <h3>It's a Problem...</h3>
+            <img src="img/MonitoringBigIssue.png"/>
+            <p><small>Source: <a href="http://scn.sap.com/community/process-orchestration/blog/2015/10/28/results-of-the-global-survey-for-sap-process-integration-part-1-of-2">IFG for PI Annual Survey</a></small></p>
+        </section>
+        
+        
+        <section>
+            <h2>SAP Standard</h2>
+            <p>Traditional Alert Framework</p>
+            <p>Since 7.3: also Component-Based Message Alerting &amp; SolMan</p>
+        </section>
+        
+        
+        <section>
+            <div>
+                <p>Difficult to set up; <em>very</em> sparse documentation</p>
+                <p>Requires SolMan as central monitor</p>
+            </div>
+            <div class="fragment">
+                <h3>IFG Survey results:</h3>
+                <p>25% adoption</p>
+                <p>Barriers: 
+                    <ol>
+                        <li>20%: org issues</li>
+                        <li>15%: lack of skills</li>
+                    </ol>
+                </p>
+            </div>
+        </section>
+        
+        
+        <section>
+            <h2>MMG's Journey</h2>
+            <ol>
+                <li>Alert Framework</li>
+                <li>CBMA</li>
+                <li>Custom Solution</li>
+            </ol>
+        </section>
+        
+        
+        <section>
+            <h3>Aims</h3>
+            <p>Simple</p>
+            <p style="text-decoration: line-through;">Email</p>
+            <p style="text-decoration: line-through;">Noise</p>
+        </section>
+        
+        
+        <section>
+            <h3>Initial Design</h3>
+            <em>Insert Diagram here</em>
+        </section>
+        
+        
+    </section>  
+    
+</div>
