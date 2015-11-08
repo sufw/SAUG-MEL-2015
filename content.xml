@@ -24,6 +24,19 @@
     
     
     
+    <section id="context">
+        <section>
+            
+        </section>
+        
+    </section>
+    
+    
+    <section>
+        <h2>Standard over Proprietary</h2>
+    </section>
+    
+    
     <section id="schemas">
         
     </section>
@@ -32,11 +45,81 @@
     
     <section id="mappings">
         <section>
+            <h2>Mappings</h2>
+        </section>
+        
+        <section>
+            <h2>Graphical Mapping</h2>
+            <ul>
+                <li>Drag &amp; Drop</li>
+                <li>"default" choice</li>
+                <li>Looks Simple</li>
+            </ul>
+            <h1>NEED SCREENSHOT</h1>
+        </section>
+        
+        <section>
+            <img src="img/GraphicalMapping.png"/>
+        </section>
+        
+        <section data-background="img/GraphicalMapping_dark.png">
+            <p>However...</p>
+            <ul>
+                <li>Gets unwieldy, quickly</li>
+                <li>Not documentable without <a href="http://figaf.com/services/pi-documenter/">other tools</a></li>
+                <li>Context-Hell is always near</li>
+            </ul>
+        </section>
+        
+        <section>
             <h2>XSLT</h2>
         </section>
         
         <section>
-            <h2>Why?</h2>
+            <h3>Portable</h3>
+            <p>Standard language</p>
+            <p>Used by most middleware systems</p>
+            <p>Collaboration! :-)</p>
+        </section>
+        
+        <section>
+            <h3>Documentable</h3>
+            <pre><code class="hlxml" data-trim>
+<xsl:template match="/*[child::UnitCodeRequest_response]" priority="10">
+    <!-- Check if the name of the first child of the root element matches that of our expected response message
+         The name of the root node depends on the Message Types defined in the Service Interface in the ESR, so we don't know it for sure at runtime.
+         The name we are looking for in the match attribute above is the name of the SQL-XML's root node, followed by '_response'. See below for the original query.
+         This whole thing is done by having this template override (via higher priority) the other 'root node' template which outputs the SQL request otherwise. -->
+    
+    <UnitCodeRequestResponse>
+        <!-- The name of this XML element does need to match the one defined in the Service Interface, or else it may fail schema validation in the service consumer -->
+        <xsl:apply-templates mode="result"/>
+    </UnitCodeRequestResponse>
+</xsl:template></code></pre>
+        </section>
+        
+        <section>
+            <h3>Tool support</h3>
+            <h1>NEED SCREENSHOT</h1>
+        </section>
+        
+        <section>
+            <h3>Extensible</h3>
+            <p>includes &amp; overrides</p>
+            <p>=</p>
+            <p>Regression-safe adding</p>
+        </section>
+        
+        <section>
+            <h3>Performance</h3>
+            <p>In <em>most</em> cases a non-issue</p>
+            <p>Much improved in PI 7.1 or later</p>
+            <p>AusPost's "POSLog" interface used only XSLT for 1m+ messages/day</p>
+        </section>
+        
+        <section>
+            <h3>Challenges</h3>
+            
         </section>
         
         <section>
