@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div class="slides">
+    
     <section id="opener">
         <h1>SAP PI - How We Work</h1>
         <h3>SAUG Melbourne Conference 2015</h3>
@@ -60,6 +60,12 @@
         
         <section>
             <img src="img/GraphicalMapping.png"/>
+            <div class="attribution"><span>Image courtesy of <a href="http://www.figaf.com">Daniel Graversen</a></span></div>
+        </section>
+        
+        <section>
+            <img src="img/GraphicalMapping_OMG.png"/>
+            <span class="attribution">Image courtesy of <a href="https://twitter.com/js1972/status/593612667060785152">Jason Scott</a></span>
         </section>
         
         <section data-background="img/GraphicalMapping_dark.png">
@@ -72,7 +78,7 @@
         </section>
         
         <section>
-            <h2>XSLT</h2>
+            <h1>XSLT</h1>
         </section>
         
         <section>
@@ -84,23 +90,82 @@
         
         <section>
             <h3>Documentable</h3>
-            <pre><code class="hlxml" data-trim>
-<xsl:template match="/*[child::UnitCodeRequest_response]" priority="10">
-    <!-- Check if the name of the first child of the root element matches that of our expected response message
-         The name of the root node depends on the Message Types defined in the Service Interface in the ESR, so we don't know it for sure at runtime.
-         The name we are looking for in the match attribute above is the name of the SQL-XML's root node, followed by '_response'. See below for the original query.
-         This whole thing is done by having this template override (via higher priority) the other 'root node' template which outputs the SQL request otherwise. -->
-    
-    <UnitCodeRequestResponse>
-        <!-- The name of this XML element does need to match the one defined in the Service Interface, or else it may fail schema validation in the service consumer -->
-        <xsl:apply-templates mode="result"/>
-    </UnitCodeRequestResponse>
-</xsl:template></code></pre>
+            <img src="img/XSLTcomments.png"/>
         </section>
         
         <section>
-            <h3>Tool support</h3>
-            <h1>NEED SCREENSHOT</h1>
+            <h3>Tools: Debug!</h3>
+            <img src="img/OxygenDebugger.png"/>
+        </section>
+        
+        <section>
+            <h3>Tools: Unit Tests</h3>
+            <p>e.g. using <a href="http://www.jenitennison.com/xslt/xspec">XSpec</a></p>
+            <ul>
+                <li>Define input XML</li>
+                <li>XPath assertions on output, and/or</li>
+                <li>Expected XML output</li>
+            </ul>
+        </section>
+        
+        <section>
+            <pre><code class="hlxml" data-trim>
+                <x:scenario label="Removal of ZYFC rate type in a mixed message">
+                <x:context>
+                    <ExchangeRateReplicationRequestMessage xmlns="http://mmg.com/schemas/p2m" xmlns:prx="urn:sap.com:proxy:ECP:/1SAI/TAS5CA488983C567A6B30CB:731">
+                        <ExchangeRates>
+                            <ExchangeRate>
+                                <UnitCurrency>USD</UnitCurrency>
+                                <QuotedCurrency>AUD</QuotedCurrency>
+                                <Rate>1.20613</Rate>
+                                <RateType>M</RateType>
+                                <EffectiveDate>2014-12-10</EffectiveDate>
+                            </ExchangeRate>
+                            <ExchangeRate>
+                                <UnitCurrency>CAD</UnitCurrency>
+                                <QuotedCurrency>HKD</QuotedCurrency>
+                                <Rate>7.07113562438128</Rate>
+                                <RateType>ZYFC</RateType>
+                                <EffectiveDate>2014-12-10</EffectiveDate>
+                            </ExchangeRate>
+                            ...
+                        </ExchangeRates>
+                    </ExchangeRateReplicationRequestMessage>
+                </x:context>
+            </code></pre>
+        </section>
+        
+        <section>
+            <pre><code class="hlxml" data-trim>
+                <x:expect label="No ZYFC rate types left" test="count(//p2m:ExchangeRate[p2m:RateType = 'ZYFC']) = 0"/>
+                
+                <x:expect label="Checking against complete XML">
+                    <ExchangeRateReplicationRequestMessage xmlns="http://mmg.com/schemas/p2m" xmlns:prx="urn:sap.com:proxy:ECP:/1SAI/TAS5CA488983C567A6B30CB:731">
+                        <ExchangeRates>
+                            <ExchangeRate>
+                                <UnitCurrency>USD</UnitCurrency>
+                                <QuotedCurrency>AUD</QuotedCurrency>
+                                <Rate>1.20613</Rate>
+                                <RateType>M</RateType>
+                                <EffectiveDate>2014-12-10</EffectiveDate>
+                            </ExchangeRate>
+                            <ExchangeRate>
+                                <UnitCurrency>USD</UnitCurrency>
+                                <QuotedCurrency>TND</QuotedCurrency>
+                                <Rate>1.8566</Rate>
+                                <RateType>M</RateType>
+                                <EffectiveDate>2014-12-10</EffectiveDate>
+                            </ExchangeRate>
+                            ...
+                        </ExchangeRates>
+                    </ExchangeRateReplicationRequestMessage>
+                </x:expect>
+            </code></pre>
+        </section>
+        
+        <section>
+            <img src="img/UnitTestResults.png"></img>
+            <p><small><a href="https://www.youtube.com/watch?v=iPOntyq6JiE">Watch a Demo </a> by the creator <a href="http://www.jenitennison.com">Jeni T</a></small></p>
         </section>
         
         <section>
@@ -113,7 +178,7 @@
         <section>
             <h3>Performance</h3>
             <p>In <em>most</em> cases a non-issue</p>
-            <p>Much improved in PI 7.1 or later</p>
+            <p><em>Used</em> to be dicey before 7.10</p>
             <p>AusPost's "POSLog" interface used only XSLT for 1m+ messages/day</p>
         </section>
         

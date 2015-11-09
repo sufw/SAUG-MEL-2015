@@ -32,6 +32,12 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+		<style>
+	        .attribution {
+	                        float: right;
+	                        font-size: small;
+	        }
+    	</style>
 	</head>
 
 	<body>
@@ -39,69 +45,184 @@
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				
+			<div class="slides" id="slidecontainer">
 				
 				
 			
-					<section id="opener">
-						<h1>SAP PI - How We Work</h1>
-						<h3>SAUG Melbourne Conference 2015</h3>
-						<p>
-							<small><a href="http://about.sufw.me">Sascha Wenninger</a> (<a href="http://twitter.com/sufw">@sufw</a>)</small>
-						</p>
-						<img src="img/Blue_T_3D.png"/>
-						<img src="img/SAUG.png" width="320px"/>
-					</section>
+				
+				<section id="opener">
+					<h1>SAP PI - How We Work</h1>
+					<h3>SAUG Melbourne Conference 2015</h3>
+					<p>
+						<small><a href="http://about.sufw.me">Sascha Wenninger</a> (<a href="http://twitter.com/sufw">@sufw</a>)</small>
+					</p>
+					<img src="img/Blue_T_3D.png"/>
+					<img src="img/SAUG.png" width="320px"/>
+				</section>
+				
+				
+				
+				<section id="lean">
 					
+				</section>
+				
+				
+				
+				<section id="innovationTokens">
 					
-					
-					<section id="lean">
+				</section>
+				
+				
+				
+				<section id="context">
+					<section>
 						
 					</section>
 					
+				</section>
+				
+				
+				<section>
+					<h2>Standard over Proprietary</h2>
+				</section>
+				
+				
+				<section id="schemas">
 					
+				</section>
+				
+				
+				
+				<section id="mappings">
+					<section>
+						<h2>Mappings</h2>
+					</section>
 					
-					<section id="innovationTokens">
+					<section>
+						<h2>Graphical Mapping</h2>
+						<ul>
+							<li>Drag &amp; Drop</li>
+							<li>"default" choice</li>
+							<li>Looks Simple</li>
+						</ul>
+						<h1>NEED SCREENSHOT</h1>
+					</section>
+					
+					<section>
+						<img src="img/GraphicalMapping.png"/>
+						<div class="attribution"><span>Image by <a href="http://www.figaf.com">Daniel Graversen</a></span></div>
+					</section>
+					
+					<section data-background="img/GraphicalMapping_dark.png">
+						<p>However...</p>
+						<ul>
+							<li>Gets unwieldy, quickly</li>
+							<li>Not documentable without <a href="http://figaf.com/services/pi-documenter/">other tools</a></li>
+							<li>Context-Hell is always near</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h1>XSLT</h1>
+					</section>
+					
+					<section>
+						<h3>Portable</h3>
+						<p>Standard language</p>
+						<p>Used by most middleware systems</p>
+						<p>Collaboration! :-)</p>
+					</section>
+					
+					<section>
+						<h3>Documentable</h3>
+						<img src="img/XSLTcomments.png"/>
+					</section>
+					
+					<section>
+						<h3>Tools: Debug!</h3>
+						<img src="img/OxygenDebugger.png"/>
+					</section>
+					
+					<section>
+						<h3>Tools: Unit Tests</h3>
+						<p>e.g. using <a href="http://www.jenitennison.com/xslt/xspec">XSpec</a></p>
+						<ul>
+							<li>Define input XML</li>
+							<li>XPath assertions on output, and/or</li>
+							<li>Expected XML output</li>
+						</ul>
+					</section>
+					
+					<section>
+						<pre><code class="hlxml" data-trim><x:scenario label="Removal of ZYFC rate type in a mixed message">
+                <x:context>
+                    <ExchangeRateReplicationRequestMessage xmlns="http://mmg.com/schemas/p2m" xmlns:prx="urn:sap.com:proxy:ECP:/1SAI/TAS5CA488983C567A6B30CB:731">
+                        <ExchangeRates>
+                            <ExchangeRate>
+                                <UnitCurrency>USD</UnitCurrency>
+                                <QuotedCurrency>AUD</QuotedCurrency>
+                                <Rate>1.20613</Rate>
+                                <RateType>M</RateType>
+                                <EffectiveDate>2014-12-10</EffectiveDate>
+                            </ExchangeRate>
+                            <ExchangeRate>
+                                <UnitCurrency>CAD</UnitCurrency>
+                                <QuotedCurrency>HKD</QuotedCurrency>
+                                <Rate>7.07113562438128</Rate>
+                                <RateType>ZYFC</RateType>
+                                <EffectiveDate>2014-12-10</EffectiveDate>
+                            </ExchangeRate>
+                            ...
+                        </ExchangeRates>
+                    </ExchangeRateReplicationRequestMessage>
+                </x:context>
+            </code></pre>
+					</section>
+					
+					<section>
+						<img src="img/UnitTestResults.png"></img>
+						<p><small><a href="https://www.youtube.com/watch?v=iPOntyq6JiE">Watch a Demo </a> by the creator <a href="http://www.jenitennison.com">Jeni T</a></small></p>
+					</section>
+					
+					<section>
+						<h3>Extensible</h3>
+						<p>includes &amp; overrides</p>
+						<p>=</p>
+						<p>Regression-safe adding</p>
+					</section>
+					
+					<section>
+						<h3>Performance</h3>
+						<p>In <em>most</em> cases a non-issue</p>
+						<p><em>Used</em> to be dicey before 7.10</p>
+						<p>AusPost's "POSLog" interface used only XSLT for 1m+ messages/day</p>
+					</section>
+					
+					<section>
+						<h3>Challenges</h3>
 						
 					</section>
 					
-					
-					
-					<section id="schemas">
-						
+					<section>
+						<h2>XSLT 2.0</h2>
 					</section>
 					
 					
-					
-					<section id="mappings">
-						<section>
-							<h2>XSLT</h2>
-						</section>
-						
-						<section>
-							<h2>Why?</h2>
-						</section>
-						
-						<section>
-							<h2>XSLT 2.0</h2>
-						</section>
-						
-						
-					</section>
-					
-					
-					
-					<section id="sourceControl">
-						<h2>Source Control</h2>
-					</section>
-					
-					
-					
+				</section>
+				
+				
+				
+				<section id="sourceControl">
+					<h2>Source Control</h2>
+				</section>
+				
+				
+				
 				<section id="alerting">
 					<section data-background="img/SafetyFirst.jpg">
 						<h2>Alerting</h2>
 					</section>
+					
 					
 					<section>
 						<h3>It's a Problem...</h3>
@@ -109,11 +230,14 @@
 						<p><small>Source: <a href="http://scn.sap.com/community/process-orchestration/blog/2015/10/28/results-of-the-global-survey-for-sap-process-integration-part-1-of-2">IFG for PI Annual Survey</a></small></p>
 					</section>
 					
+					
 					<section>
 						<h2>SAP Standard</h2>
 						<p>Traditional Alert Framework</p>
 						<p>Since 7.3: also Component-Based Message Alerting &amp; SolMan</p>
 					</section>
+					
+					
 					<section>
 						<div>
 							<p>Difficult to set up; <em>very</em> sparse documentation</p>
@@ -122,9 +246,16 @@
 						<div class="fragment">
 							<h3>IFG Survey results:</h3>
 							<p>25% adoption</p>
-							<p>Barriers: org issues (20%); skills (15%)</p>
+							<p>Barriers: 
+								<ol>
+									<li>20%: org issues</li>
+									<li>15%: lack of skills</li>
+								</ol>
+							</p>
 						</div>
 					</section>
+					
+					
 					<section>
 						<h2>MMG's Journey</h2>
 						<ol>
@@ -137,13 +268,23 @@
 					
 					<section>
 						<h3>Aims</h3>
-						<p><strikethrough>Email</strikethrough></p>
+						<p>Simple</p>
+						<p style="text-decoration: line-through;">Email</p>
+						<p style="text-decoration: line-through;">Noise</p>
 					</section>
+					
+					
+					<section>
+						<h3>Initial Design</h3>
+						<em>Insert Diagram here</em>
+					</section>
+					
+					
 				</section>  
 					
 		
 				
-				
+				<!-- ############## START OF STANDARD CONTENT #################### -->
 				
 				
 				
@@ -512,6 +653,15 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
+var oReq = new XMLHttpRequest();
+oReq.addEventListener("load", insertContent);
+oReq.open("GET", "/content.xml");
+oReq.send();
+
+function insertContent () {
+  document.getElementById("slidecontainer").innerHTML = this.responseText;
+}
 
 		</script>
 
