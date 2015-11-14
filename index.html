@@ -654,14 +654,14 @@ Reveal.addEventListener( 'customevent', function() {
 				]
 			});
 
-var oReq = new XMLHttpRequest();
-oReq.addEventListener("load", insertContent);
-oReq.open("GET", "/content.xml");
-oReq.send();
-
-function insertContent () {
-  document.getElementById("slidecontainer").innerHTML = this.responseText;
-}
+			var oReq = new XMLHttpRequest();
+			oReq.addEventListener("load", insertContent);
+			oReq.open("GET", "/content.xml");
+			oReq.send();
+			
+			function insertContent () {
+			  document.getElementById("slidecontainer").innerHTML = this.responseText;
+			}
 
 		</script>
 
