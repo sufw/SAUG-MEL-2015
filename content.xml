@@ -6,10 +6,15 @@
         <p>
             <small><a href="http://about.sufw.me">Sascha Wenninger</a> (<a href="http://twitter.com/sufw">@sufw</a>)</small>
         </p>
-        <img src="img/Blue_T_3D.png"/>
-        <img src="img/SAUG.png" width="320px"/>
+        <img src="img/Blue_T_3D.png" style="border: none;"/>
+        <img src="img/SAUG.png" width="114px" style="border: none;"/>
     </section>
     
+    
+    <section>
+        <h2>About Me</h2>
+        
+    </section>
     
     
     <section id="lean">
@@ -100,7 +105,15 @@
         
         <section>
             <h3>Tool support</h3>
-            <h1>NEED SCREENSHOT</h1>
+            <ul>
+                <li>Debuggers</li>
+                <li>Versioning &amp; diffs</li>
+                <li><a href="http://stackoverflow.com/search?q=xslt">StackOverflow</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h1>TODO: NEED SCREENSHOT OF DEBUGGER</h1>
         </section>
         
         <section>
@@ -119,11 +132,55 @@
         
         <section>
             <h3>Challenges</h3>
+        </section>
+        
+        <section data-background="img/TheScream.jpg">
+            <h2>Muenchian Method</h2>
+        </section>
+        
+        <section>
             
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th rowspan="3"></th>
+                        <th>Last Name</th>
+                        <th>First Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Marie</td>
+                        <td>Curie</td>
+                        <td></td>
+                        <td>Becquerel</td>
+                        <td>Henri</td>
+                    </tr>
+                    <tr>
+                        <td>Pierre</td>
+                        <td>Curie</td>
+                        <td></td>
+                        <td>Curie</td>
+                        <td>Henri</td>
+                    </tr>
+                    <tr>
+                        <td>Henri</td>
+                        <td>Becquerel</td>
+                        <td></td>
+                        <td></td>
+                        <td>Marie</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         
         <section>
             <h2>XSLT 2.0</h2>
+            <p>Makes many things <em>much</em> simpler!</p>
+            <p>Supported in a <a href="http://scn.sap.com/community/pi-and-soa-middleware/blog/2014/10/14/how-to-import-and-use-xslt-20-mappings-in-sap-pipo">limited</a> way from PI 7.31 SP11</p>
+            <p>Alternative: Java wrapper.</p>
         </section>
         
         
