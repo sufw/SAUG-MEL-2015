@@ -23,7 +23,7 @@
     
     <section title="about me">
         <h2>About Me</h2>
-        
+        <h1>TODO: this</h1>
     </section>
     
     
@@ -73,8 +73,8 @@
     
     
     <section title="ideas">
-        <section>
-            <h1>Some Ideas</h1> 
+        <section data-background="img/Lightbulb.jpg">
+            <h1 style="color: black;">Some Ideas</h1> 
         </section>
         
         
@@ -399,7 +399,7 @@
         </section>
         
         <section>
-            <h1>TODO: linear master graph view</h1>
+            <img src="img/Github_Trunk.png" style="border: none; background: none; box-shadow: none;"/>
         </section>
         
         <section>
@@ -407,8 +407,8 @@
         </section>
         
         <section>
-            <h3>Being Polite: Pull Requests</h3>
-            <h1>TODO: some Visio</h1>
+            <h3>Be Polite: Pull Requests</h3>
+            <img src="img/Github_Branch.png" style="border: none; background: none; box-shadow: none;"/>
         </section>
         
         <section>
