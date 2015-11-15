@@ -1,13 +1,13 @@
 <div class="slides">
     
-    <section id="opener">
+    <section>
         <h1>SAP PI - How We Work</h1>
         <h3>SAUG Melbourne Conference 2015</h3>
         <p>
             <small><a href="http://about.sufw.me">Sascha Wenninger</a> (<a href="http://twitter.com/sufw">@sufw</a>)</small>
         </p>
-        <img src="img/Blue_T_3D.png" style="border: none;"/>
-        <img src="img/SAUG.png" width="114px" style="border: none;"/>
+        <img src="img/Blue_T_3D.png" height="120px" style="border: none;"/>
+        <img src="img/SAUG.png" height="120px" style="border: none;"/>
     </section>
     
     
@@ -17,21 +17,16 @@
     </section>
     
     
-    <section id="lean">
-        
+    <section>
+        <h1>Some Ideas</h1>
+        <p>Lean</p>
+        <p>Innovation Tokens</p>
     </section>
     
     
-    
-    <section id="innovationTokens">
-        
-    </section>
-    
-    
-    
-    <section id="context">
+    <section>
         <section>
-            
+            <h1>Context</h1>    
         </section>
         
     </section>
@@ -42,15 +37,19 @@
     </section>
     
     
-    <section id="schemas">
+    <section>
+        <section>
+            <h1>Schemas</h1>
+        </section>
         
     </section>
     
     
     
-    <section id="mappings">
-        <section>
-            <h2>Mappings</h2>
+    <section>
+        <!-- Image thanks to James (https://www.flickr.com/photos/18928073@N00/2091539789) -->
+        <section data-background="img/WiringDiagram.jpg">
+            <h1>Mappings</h1>
         </section>
         
         <section>
@@ -60,12 +59,11 @@
                 <li>"default" choice</li>
                 <li>Looks Simple</li>
             </ul>
-            <h1>NEED SCREENSHOT</h1>
         </section>
         
         <section>
             <img src="img/GraphicalMapping.png"/>
-            <div class="attribution"><span>Image courtesy of <a href="http://www.figaf.com">Daniel Graversen</a></span></div>
+            <span class="attribution">Image courtesy of <a href="http://www.figaf.com">Daniel Graversen</a></span>
         </section>
         
         <section>
@@ -139,20 +137,14 @@
                 </x:context>
             </code></pre>
         </section>
-        
+   
         <section>
-<<<<<<< HEAD
-            <h3>Tool support</h3>
-            <ul>
-                <li>Debuggers</li>
-                <li>Versioning &amp; diffs</li>
-                <li><a href="http://stackoverflow.com/search?q=xslt">StackOverflow</a></li>
-            </ul>
+            <h3>Tools: <a href="http://stackoverflow.com/search?q=xslt">StackOverflow</a></h3>
+            <img src="img/GeekPokeStackOverflow.png"/>
+            <span class="attribution">Image courtesy of <a href="http://geek-and-poke.com/geekandpoke/2013/1/22/stackoverflow.html">Geek &amp; Poke</a></span>
         </section>
         
         <section>
-            <h1>TODO: NEED SCREENSHOT OF DEBUGGER</h1>
-=======
             <pre><code class="hlxml" data-trim>
                 <x:expect label="No ZYFC rate types left" test="count(//p2m:ExchangeRate[p2m:RateType = 'ZYFC']) = 0"/>
                 
@@ -183,7 +175,6 @@
         <section>
             <img src="img/UnitTestResults.png"></img>
             <p><small><a href="https://www.youtube.com/watch?v=iPOntyq6JiE">Watch a Demo </a> by the creator <a href="http://www.jenitennison.com">Jeni T</a></small></p>
->>>>>>> 56dd905df8fc65baf7794400f4c480f0e85fa8e8
         </section>
         
         <section>
@@ -205,17 +196,17 @@
         </section>
         
         <section data-background="img/TheScream.jpg">
-            <h2>Muenchian Method</h2>
+            <!-- Image thanks to Wikipedia (https://en.wikipedia.org/wiki/The_Scream#/media/File:The_Scream.jpg) -->
+            <h2>Grouping: The Muenchian Method</h2>
         </section>
         
         <section>
-            
             <table>
                 <thead>
                     <tr>
                         <th>First Name</th>
                         <th>Last Name</th>
-                        <th rowspan="3"></th>
+                        <th width="100px"></th>
                         <th>Last Name</th>
                         <th>First Name</th>
                     </tr>
@@ -224,26 +215,27 @@
                     <tr>
                         <td>Marie</td>
                         <td>Curie</td>
-                        <td></td>
+                        <td rowspan="3"></td>
                         <td>Becquerel</td>
                         <td>Henri</td>
+                    </tr>
+                    <tr>
+                        <td>Henri</td>
+                        <td>Becquerel</td>
+                        
+                        <td rowspan="2">Curie</td>
+                        <td>Marie</td>
                     </tr>
                     <tr>
                         <td>Pierre</td>
                         <td>Curie</td>
-                        <td></td>
-                        <td>Curie</td>
-                        <td>Henri</td>
-                    </tr>
-                    <tr>
-                        <td>Henri</td>
-                        <td>Becquerel</td>
-                        <td></td>
-                        <td></td>
-                        <td>Marie</td>
+                        
+                        
+                        <td>Pierre</td>
                     </tr>
                 </tbody>
             </table>
+            <p>Basically the GROUP BY clause in SQL...</p>
         </section>
         
         <section>
@@ -253,20 +245,102 @@
             <p>Alternative: Java wrapper.</p>
         </section>
         
+        <section>
+            <h3>XSLT 1.0</h3>
+            <pre><code class="hlxml" data-trim>
+<xsl:key name="scientists-by-lastname" match="scientist" use="lastname" />
+<xsl:template match="records">
+    <xsl:for-each select="scientist[count(. | key('scientists-by-lastname', lastname)[1]) = 1]">
+        <xsl:sort select="lastname" />
+        <xsl:value-of select="lastname" />,<br />
+        <xsl:for-each select="key('scientists-by-lastname', lastname)">
+            <xsl:sort select="firstname" />
+            <xsl:value-of select="firstname" /><br />
+        </xsl:for-each>
+    </xsl:for-each>
+</xsl:template>
+            </code></pre>
+            <span class="attribution">Adapted from <a href="http://www.jenitennison.com/xslt/grouping/muenchian.html">template solution</a> by Jeni T.</span>
+        </section>
+        
+        <section>
+            <h3>XSLT 2.0</h3>
+            <pre><code class="hlxml" data-trim>
+<xsl:for-each-group select="LastName">
+    ...
+</xsl:for-each-group>
+            </code></pre>
+            <p>And lots of other improvements...</p>
+        </section>
+        
         
     </section>
     
     
     
     <section id="sourceControl">
-        <h2>Source Control</h2>
+        <section>
+            <h1>Source Control</h1>
+            <img src="img/LegoEvolution.jpg" style="border: none;"/>
+            <!-- Image thanks to bluemoose (https://www.flickr.com/photos/blue-moose/4772211017) -->
+        </section>
+        
+        <section>
+            <p>Needed a way to address shortcomings of the ESR:</p>
+            <ul>
+                <li>conflicts with concurrent edits</li>
+                <li>visibility/blame</li>
+                <li>non-code artefacts (e.g. scripts)</li>
+            </ul>
+        </section>
+        
+        <section>
+            <img href="img/GitHub-Mark-Light-120px-plus.png" style="border: none;"/>
+        </section>
+        
+        <section>
+            <img src="img/xkcd1597.png"/>
+            <span class="attribution">Image courtesy of <a href="http://xkcd.com/1597/">xkcd</a></span>
+        </section>
+        
+        <section>
+            <h3>Started simple</h3>
+            <p>Initial learning curve</p>
+            <p>Discipline required</p>
+        </section>
+        
+        <section>
+            <h1>TODO: linear master graph view</h1>
+        </section>
+        
+        <section>
+            <img src="img/austin_powers.jpg" style="border: none;"/>
+        </section>
+        
+        <section>
+            <h3>Being Polite: Pull Requests</h3>
+            <h1>TODO: some Visio</h1>
+        </section>
+        
+        <section>
+            <h3>Possibilities</h3>
+            <p>Code reviews before merging into master</p>
+            <p>Offshore development: Only trusted devs have merge rights</p>
+            <p>Avoid edit conflicts</p>
+        </section>
+        
+        <section>
+            <h3>What's Next?</h3>
+            <img src="img/ReviewNinjaGirl.png" style="border: none;" href="https://www.review.ninja/"/>
+            <span class="attribution">It's an SAP tool!</span>
+        </section>
     </section>
     
 
 
     <section id="alerting">
         <section data-background="img/SafetyFirst.jpg">
-            <h2>Alerting</h2>
+            <h1>Alerting</h1>
         </section>
         
         
@@ -285,20 +359,21 @@
         
         
         <section>
-            <div>
-                <p>Difficult to set up; <em>very</em> sparse documentation</p>
-                <p>Requires SolMan as central monitor</p>
-            </div>
-            <div class="fragment">
-                <h3>IFG Survey results:</h3>
-                <p>25% adoption</p>
-                <p>Barriers: 
-                    <ol>
-                        <li>20%: org issues</li>
-                        <li>15%: lack of skills</li>
-                    </ol>
-                </p>
-            </div>
+            <p>Difficult to set up; <em>very</em> sparse documentation</p>
+            <p>SolMan as central monitor, polls other systems for alerts</p>
+            <p>Lots of noise</p>
+        </section>
+        
+        
+        <section>
+            <h3>IFG Survey</h3>
+            <p>25% adoption</p>
+            <p>Barriers: 
+                <ol>
+                    <li>20%: org issues</li>
+                    <li>15%: lack of skills</li>
+                </ol>
+            </p>
         </section>
         
         
@@ -317,6 +392,10 @@
             <p>Simple</p>
             <p style="text-decoration: line-through;">Email</p>
             <p style="text-decoration: line-through;">Noise</p>
+        </section>
+        
+        <section>
+            
         </section>
         
         
