@@ -37,7 +37,7 @@
     </section>
     
     
-    <section>
+    <section title="schemas">
         <section>
             <h1>Schemas</h1>
         </section>
@@ -46,7 +46,7 @@
     
     
     
-    <section>
+    <section title="mappings">
         <!-- Image thanks to James (https://www.flickr.com/photos/18928073@N00/2091539789) -->
         <section data-background="img/WiringDiagram.jpg">
             <h1>Mappings</h1>
@@ -62,13 +62,22 @@
         </section>
         
         <section>
-            <img src="img/GraphicalMapping.png"/>
-            <span class="attribution">Image courtesy of <a href="http://www.figaf.com">Daniel Graversen</a></span>
+            <div style="display: inline-block;">
+                <img src="img/GraphicalMapping.png"/>
+                <div>
+                    <span class="attribution"><small>Image courtesy of <a href="http://www.figaf.com">Daniel Graversen</a></small></span>
+                </div>
+            </div>
         </section>
         
         <section>
-            <img src="img/GraphicalMapping_OMG.png"/>
-            <span class="attribution">Image courtesy of <a href="https://twitter.com/js1972/status/593612667060785152">Jason Scott</a></span>
+            <div style="display: inline-block;">
+                <img src="img/GraphicalMapping_OMG.png"/>
+                <div>
+                    <span class="attribution"><small>Image courtesy of <a href="https://twitter.com/js1972/status/593612667060785152">Jason Scott</a></small></span>
+                </div>
+            </div>
+            
         </section>
         
         <section data-background="img/GraphicalMapping_dark.png">
@@ -113,76 +122,78 @@
         
         <section>
             <pre><code class="hlxml" data-trim>
-                <x:scenario label="Removal of ZYFC rate type in a mixed message">
-                <x:context>
-                    <ExchangeRateReplicationRequestMessage xmlns="http://mmg.com/schemas/p2m" xmlns:prx="urn:sap.com:proxy:ECP:/1SAI/TAS5CA488983C567A6B30CB:731">
-                        <ExchangeRates>
-                            <ExchangeRate>
-                                <UnitCurrency>USD</UnitCurrency>
-                                <QuotedCurrency>AUD</QuotedCurrency>
-                                <Rate>1.20613</Rate>
-                                <RateType>M</RateType>
-                                <EffectiveDate>2014-12-10</EffectiveDate>
-                            </ExchangeRate>
-                            <ExchangeRate>
-                                <UnitCurrency>CAD</UnitCurrency>
-                                <QuotedCurrency>HKD</QuotedCurrency>
-                                <Rate>7.07113562438128</Rate>
-                                <RateType>ZYFC</RateType>
-                                <EffectiveDate>2014-12-10</EffectiveDate>
-                            </ExchangeRate>
-                            ...
-                        </ExchangeRates>
-                    </ExchangeRateReplicationRequestMessage>
-                </x:context>
+<x:scenario label="Removal of ZYFC rate type in a mixed message">
+    <x:context>
+        <ExchangeRateReplicationRequestMessage xmlns="http://mmg.com/schemas/p2m" xmlns:prx="urn:sap.com:proxy:ECP:/1SAI/TAS5CA488983C567A6B30CB:731">
+            <ExchangeRates>
+                <ExchangeRate>
+                    <UnitCurrency>USD</UnitCurrency>
+                    <QuotedCurrency>AUD</QuotedCurrency>
+                    <Rate>1.20613</Rate>
+                    <RateType>M</RateType>
+                    <EffectiveDate>2014-12-10</EffectiveDate>
+                </ExchangeRate>
+                <ExchangeRate>
+                    <UnitCurrency>CAD</UnitCurrency>
+                    <QuotedCurrency>HKD</QuotedCurrency>
+                    <Rate>7.07113562438128</Rate>
+                    <RateType>ZYFC</RateType>
+                    <EffectiveDate>2014-12-10</EffectiveDate>
+                </ExchangeRate>
+                ...
+            </ExchangeRates>
+        </ExchangeRateReplicationRequestMessage>
+    </x:context>
+</x:scenario>
             </code></pre>
         </section>
    
-        <section>
-            <h3>Tools: <a href="http://stackoverflow.com/search?q=xslt">StackOverflow</a></h3>
-            <img src="img/GeekPokeStackOverflow.png"/>
-            <span class="attribution">Image courtesy of <a href="http://geek-and-poke.com/geekandpoke/2013/1/22/stackoverflow.html">Geek &amp; Poke</a></span>
-        </section>
         
         <section>
             <pre><code class="hlxml" data-trim>
-                <x:expect label="No ZYFC rate types left" test="count(//p2m:ExchangeRate[p2m:RateType = 'ZYFC']) = 0"/>
-                
-                <x:expect label="Checking against complete XML">
-                    <ExchangeRateReplicationRequestMessage xmlns="http://mmg.com/schemas/p2m" xmlns:prx="urn:sap.com:proxy:ECP:/1SAI/TAS5CA488983C567A6B30CB:731">
-                        <ExchangeRates>
-                            <ExchangeRate>
-                                <UnitCurrency>USD</UnitCurrency>
-                                <QuotedCurrency>AUD</QuotedCurrency>
-                                <Rate>1.20613</Rate>
-                                <RateType>M</RateType>
-                                <EffectiveDate>2014-12-10</EffectiveDate>
-                            </ExchangeRate>
-                            <ExchangeRate>
-                                <UnitCurrency>USD</UnitCurrency>
-                                <QuotedCurrency>TND</QuotedCurrency>
-                                <Rate>1.8566</Rate>
-                                <RateType>M</RateType>
-                                <EffectiveDate>2014-12-10</EffectiveDate>
-                            </ExchangeRate>
-                            ...
-                        </ExchangeRates>
-                    </ExchangeRateReplicationRequestMessage>
-                </x:expect>
+<x:expect label="No ZYFC rate types left" test="count(//p2m:exchangerate[p2m:ratetype = 'ZYFC']) = 0"></x:expect>
+
+<x:expect label="Checking against complete XML">
+    <ExchangeRateReplicationRequestMessage xmlns="http://mmg.com/schemas/p2m" xmlns:prx="urn:sap.com:proxy:ECP:/1SAI/TAS5CA488983C567A6B30CB:731">
+        <ExchangeRates>
+            <ExchangeRate>
+                <UnitCurrency>USD</UnitCurrency>
+                <QuotedCurrency>AUD</QuotedCurrency>
+                <Rate>1.20613</Rate>
+                <RateType>M</RateType>
+                <EffectiveDate>2014-12-10</EffectiveDate>
+            </ExchangeRate>
+            <ExchangeRate>
+                <UnitCurrency>USD</UnitCurrency>
+                <QuotedCurrency>TND</QuotedCurrency>
+                <Rate>1.8566</Rate>
+                <RateType>M</RateType>
+                <EffectiveDate>2014-12-10</EffectiveDate>
+            </ExchangeRate>
+            ...
+        </ExchangeRates>
+    </ExchangeRateReplicationRequestMessage>
+</x:expect>
             </code></pre>
         </section>
+        
         
         <section>
             <img src="img/UnitTestResults.png"></img>
             <p><small><a href="https://www.youtube.com/watch?v=iPOntyq6JiE">Watch a Demo </a> by the creator <a href="http://www.jenitennison.com">Jeni T</a></small></p>
         </section>
         
+        
         <section>
-            <h3>Extensible</h3>
-            <p>includes &amp; overrides</p>
-            <p>=</p>
-            <p>Regression-safe adding</p>
+            <h3>Tools: <a href="http://stackoverflow.com/search?q=xslt">StackOverflow</a></h3>
+            <div style="display: inline-block;">
+                <img src="img/GeekPokeStackOverflow.png"/>
+                <div>
+                    <span class="attribution"><small>Image courtesy of <a href="http://geek-and-poke.com/geekandpoke/2013/1/22/stackoverflow.html">Geek &amp; Poke</a></small></span>
+                </div>
+            </div>
         </section>
+        
         
         <section>
             <h3>Performance</h3>
@@ -191,14 +202,17 @@
             <p>AusPost's "POSLog" interface used only XSLT for 1m+ messages/day</p>
         </section>
         
+        
         <section>
-            <h3>Challenges</h3>
+            <h2>Challenges</h2>
         </section>
+        
         
         <section data-background="img/TheScream.jpg">
             <!-- Image thanks to Wikipedia (https://en.wikipedia.org/wiki/The_Scream#/media/File:The_Scream.jpg) -->
             <h2>Grouping: The Muenchian Method</h2>
         </section>
+        
         
         <section>
             <table>
@@ -233,17 +247,14 @@
                         
                         <td>Pierre</td>
                     </tr>
+                    <tr>
+                        
+                    </tr>
                 </tbody>
             </table>
             <p>Basically the GROUP BY clause in SQL...</p>
         </section>
         
-        <section>
-            <h2>XSLT 2.0</h2>
-            <p>Makes many things <em>much</em> simpler!</p>
-            <p>Supported in a <a href="http://scn.sap.com/community/pi-and-soa-middleware/blog/2014/10/14/how-to-import-and-use-xslt-20-mappings-in-sap-pipo">limited</a> way from PI 7.31 SP11</p>
-            <p>Alternative: Java wrapper.</p>
-        </section>
         
         <section>
             <h3>XSLT 1.0</h3>
@@ -260,8 +271,17 @@
     </xsl:for-each>
 </xsl:template>
             </code></pre>
-            <span class="attribution">Adapted from <a href="http://www.jenitennison.com/xslt/grouping/muenchian.html">template solution</a> by Jeni T.</span>
+            <span class="attribution"><small>Adapted from <a href="http://www.jenitennison.com/xslt/grouping/muenchian.html">template solution</a> by Jeni T.</small></span>
         </section>
+        
+        
+        <section>
+            <h2>XSLT 2.0</h2>
+            <p>Makes many things <em>much</em> simpler!</p>
+            <p>Supported in a <a href="http://scn.sap.com/community/pi-and-soa-middleware/blog/2014/10/14/how-to-import-and-use-xslt-20-mappings-in-sap-pipo">limited</a> way from PI 7.31 SP11</p>
+            <p>Alternative: Java wrapper.</p>
+        </section>
+        
         
         <section>
             <h3>XSLT 2.0</h3>
@@ -274,15 +294,20 @@
         </section>
         
         
+        <section>
+            <h3>XSLT 2.0</h3>
+            <p>Now supported in 7.31 and later!</p>
+        </section>
+        
+        
     </section>
     
     
     
-    <section id="sourceControl">
-        <section>
+    <section title="source control">
+        <section data-background="img/Evolution.jpg">
             <h1>Source Control</h1>
-            <img src="img/LegoEvolution.jpg" style="border: none;"/>
-            <!-- Image thanks to bluemoose (https://www.flickr.com/photos/blue-moose/4772211017) -->
+            <!-- Image thanks to spykster (https://www.flickr.com/photos/spykster/7625762720) -->
         </section>
         
         <section>
@@ -295,12 +320,16 @@
         </section>
         
         <section>
-            <img href="img/GitHub-Mark-Light-120px-plus.png" style="border: none;"/>
+            <img src="img/GitHubBrandMark.png" style="border: none; background:none; box-shadow: none;"/>
         </section>
         
         <section>
-            <img src="img/xkcd1597.png"/>
-            <span class="attribution">Image courtesy of <a href="http://xkcd.com/1597/">xkcd</a></span>
+            <div style="display: inline-block;">
+                <img src="img/xkcd1597.png"/>
+                <div><span class="attribution"><small>Image courtesy of <a href="http://xkcd.com/1597/">xkcd</a></small></span></div>
+            </div>
+            
+
         </section>
         
         <section>
@@ -331,14 +360,19 @@
         
         <section>
             <h3>What's Next?</h3>
-            <img src="img/ReviewNinjaGirl.png" style="border: none;" href="https://www.review.ninja/"/>
-            <span class="attribution">It's an SAP tool!</span>
+            <div style="display: inline-block;">
+                <a href="https://www.review.ninja/">
+                    <img src="img/ReviewNinjaGirl.png" style="border: none; background:none; box-shadow: none;"/>
+                </a>
+                <div><p>An <a href="https://www.review.ninja/">SAP tool</a> for Github code review!</p></div>
+            </div>
+            
         </section>
     </section>
     
 
 
-    <section id="alerting">
+    <section title="alerting">
         <section data-background="img/SafetyFirst.jpg">
             <h1>Alerting</h1>
         </section>
@@ -346,8 +380,13 @@
         
         <section>
             <h3>It's a Problem...</h3>
-            <img src="img/MonitoringBigIssue.png"/>
-            <p><small>Source: <a href="http://scn.sap.com/community/process-orchestration/blog/2015/10/28/results-of-the-global-survey-for-sap-process-integration-part-1-of-2">IFG for PI Annual Survey</a></small></p>
+            <div style="display: inline-block;">
+                <img src="img/MonitoringBigIssue.png"/>
+                <div>
+                    <span class="attribution"><small>Source: <a href="http://scn.sap.com/community/process-orchestration/blog/2015/10/28/results-of-the-global-survey-for-sap-process-integration-part-1-of-2">IFG for PI Annual Survey</a></small></span>
+                </div>
+            </div>
+            
         </section>
         
         
@@ -361,7 +400,7 @@
         <section>
             <p>Difficult to set up; <em>very</em> sparse documentation</p>
             <p>SolMan as central monitor, polls other systems for alerts</p>
-            <p>Lots of noise</p>
+            <p>Lots of noise &amp; false positives</p>
         </section>
         
         
@@ -390,8 +429,8 @@
         <section>
             <h3>Aims</h3>
             <p>Simple</p>
-            <p style="text-decoration: line-through;">Email</p>
-            <p style="text-decoration: line-through;">Noise</p>
+            <p style="text-decoration: line-through; color: grey;">Email</p>
+            <p style="text-decoration: line-through; color: grey;">Noise</p>
         </section>
         
         <section>
