@@ -386,14 +386,16 @@
                 <img src="img/xkcd1597.png"/>
                 <div><span class="attribution"><small>Image courtesy of <a href="http://xkcd.com/1597/">xkcd</a></small></span></div>
             </div>
-            
-
         </section>
         
         <section>
             <h3>Started simple</h3>
             <p>Initial learning curve</p>
             <p>Discipline required</p>
+        </section>
+        
+        <section>
+            <img src="img/Commits.png" style="border: none;"/>
         </section>
         
         <section>
