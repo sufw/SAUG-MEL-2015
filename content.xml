@@ -1,49 +1,107 @@
-<div class="slides">
+<div class="slides" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     
     <section>
-        <h1>SAP PI - How We Work</h1>
-        <h3>SAUG Melbourne Conference 2015</h3>
-        <p>
-            <small><a href="http://about.sufw.me">Sascha Wenninger</a> (<a href="http://twitter.com/sufw">@sufw</a>)</small>
-        </p>
-        <img src="img/Blue_T_3D.png" height="120px" style="border: none;"/>
-        <img src="img/SAUG.png" height="120px" style="border: none;"/>
+        <section title="cover">
+            <h1>Trying to be Boring</h1>
+            <h3>SAUG Melbourne Conference 2015</h3>
+            <p>
+                <small><a href="http://about.sufw.me">Sascha Wenninger</a> (<a href="http://twitter.com/sufw">@sufw</a>)</small>
+            </p>
+            <img src="img/Blue_T_3D.png" height="120px" style="border: none;"/>
+            <img src="img/SAUG.png" height="120px" style="border: none;"/>
+        </section>
+        
+        
+        <section>
+            <p>This presentation is online:</p>
+            <p><a href="http://slides.BlueT.com.au/lean-integration">http://slides.BlueT.com.au/lean-integration</a></p>
+            <img src="img/CC-SA.png" style="border: none; background: none; box-shadow: none;"/>
+        </section>
     </section>
     
     
-    <section>
+    
+    <section title="about me">
         <h2>About Me</h2>
         
     </section>
     
     
-    <section>
-        <h1>Some Ideas</h1>
-        <p>Lean</p>
-        <p>Innovation Tokens</p>
-    </section>
-    
-    
-    <section>
-        <section>
+    <section title="context">
+        <section data-background="img/CopperOre.jpg">
+            <!-- Image thanks to timothy.actwell (https://www.flickr.com/photos/timothyactwell/3832070288) -->
             <h1>Context</h1>    
         </section>
         
-    </section>
-    
-    
-    <section>
-        <h2>Standard over Proprietary</h2>
-    </section>
-    
-    
-    <section title="schemas">
+        
         <section>
-            <h1>Schemas</h1>
+            <h2>MMG</h2>
+            <p>Growing, mid-sized global mining company</p>
+            <p>Multi-year investment in Enterprise IT systems</p>
+            <p>Some very important interfaces</p>
+            <p>Small team: efficiency &amp; skills</p>
+        </section>
+        
+        
+        <section>
+            <h3>Challenges</h3>
+            <p>Balance</p>
+        </section>
+        
+        
+        <section>
+            <table>
+                <tr>
+                    <td style="border: none;">Modern</td>
+                    <td style="border: none;">vs.</td>
+                    <td style="border: none;">Practical</td>
+                </tr>
+                <tr style="border: none;">
+                    <td style="border: none;">Quality</td>
+                    <td style="border: none;">vs.</td>
+                    <td style="border: none;">Budget</td>
+                </tr>
+                <tr>
+                    <td style="border: none;">Solid</td>
+                    <td style="border: none;">vs.</td>
+                    <td style="border: none;">Nimble</td>
+                </tr>
+            </table>
         </section>
         
     </section>
     
+    
+    <section title="ideas">
+        <section>
+            <h1>Some Ideas</h1> 
+        </section>
+        
+        
+        <section>
+            <h2>Innovation Tokens</h2>
+            <p>"<a href="http://mcfunley.com/choose-boring-technology-slides">Choose Boring Tech</a>"</p>
+            <p><strong>Boring &#8800; Bad</strong></p>
+            <div class="fragment">
+                <p>Use new/unproven tech only where it matters</p>
+                <p>Optimise Globally (Architecture! &#9786;)</p>
+                <p>You should really <a href="http://mcfunley.com/choose-boring-technology-slides">read this!</a></p>
+            </div>
+        </section>
+        
+        
+        <section>
+            <h2>DevOps</h2>
+            <p>One team.</p>
+            <p>Dev to improve Ops</p>
+            <p>Ops Experience to improve Dev</p>
+        </section>
+        
+        
+        <section>
+            <iframe src="/Status%20Report%20for%20Payment%20Request%20Example.htm" width="95%" height="90%" style="background: white;"></iframe>
+        </section>
+    </section>
     
     
     <section title="mappings">
@@ -121,9 +179,9 @@
         </section>
         
         <section>
-            <pre><code class="hlxml" data-trim>
-<x:scenario label="Removal of ZYFC rate type in a mixed message">
-    <x:context>
+            <pre><code class="hlxml" data-trim="true">
+<scenario label="Removal of ZYFC rate type in a mixed message">
+    <context>
         <ExchangeRateReplicationRequestMessage xmlns="http://mmg.com/schemas/p2m" xmlns:prx="urn:sap.com:proxy:ECP:/1SAI/TAS5CA488983C567A6B30CB:731">
             <ExchangeRates>
                 <ExchangeRate>
@@ -143,17 +201,17 @@
                 ...
             </ExchangeRates>
         </ExchangeRateReplicationRequestMessage>
-    </x:context>
-</x:scenario>
+    </context>
+</scenario>
             </code></pre>
         </section>
    
         
         <section>
-            <pre><code class="hlxml" data-trim>
-<x:expect label="No ZYFC rate types left" test="count(//p2m:exchangerate[p2m:ratetype = 'ZYFC']) = 0"></x:expect>
+            <pre><code class="hlxml" data-trim="true">
+<expect label="No ZYFC rate types left" test="count(//p2m:exchangerate[p2m:ratetype = 'ZYFC']) = 0"></expect>
 
-<x:expect label="Checking against complete XML">
+<expect label="Checking against complete XML">
     <ExchangeRateReplicationRequestMessage xmlns="http://mmg.com/schemas/p2m" xmlns:prx="urn:sap.com:proxy:ECP:/1SAI/TAS5CA488983C567A6B30CB:731">
         <ExchangeRates>
             <ExchangeRate>
@@ -173,7 +231,7 @@
             ...
         </ExchangeRates>
     </ExchangeRateReplicationRequestMessage>
-</x:expect>
+</expect>
             </code></pre>
         </section>
         
@@ -258,7 +316,7 @@
         
         <section>
             <h3>XSLT 1.0</h3>
-            <pre><code class="hlxml" data-trim>
+            <pre><code class="hlxml" data-trim="true">
 <xsl:key name="scientists-by-lastname" match="scientist" use="lastname" />
 <xsl:template match="records">
     <xsl:for-each select="scientist[count(. | key('scientists-by-lastname', lastname)[1]) = 1]">
@@ -285,7 +343,7 @@
         
         <section>
             <h3>XSLT 2.0</h3>
-            <pre><code class="hlxml" data-trim>
+            <pre><code class="hlxml" data-trim="true">
 <xsl:for-each-group select="LastName">
     ...
 </xsl:for-each-group>
@@ -418,29 +476,148 @@
         
         <section>
             <h2>MMG's Journey</h2>
-            <ol>
-                <li>Alert Framework</li>
-                <li>CBMA</li>
-                <li>Custom Solution</li>
-            </ol>
+            <p>Alert Framework</p>
+            <p style="-ms-transform: rotate(180deg); transform: rotate(180deg);">⇧</p>
+            <p>CBMA</p>
+            <p style="-ms-transform: rotate(180deg); transform: rotate(180deg);">⇧</p>
+            <p>Custom Solution</p>
         </section>
         
         
         <section>
-            <h3>Aims</h3>
+            <h2>Alert Framework</h2>
+            <h1>TODO: Diagram</h1>
+        </section>
+        
+        
+        <section>
+            <h2>Challenges</h2>
+            <p>Brittle</p>
+            <p>Noise</p>
+            <p>Email == Spam</p>
+        </section>
+        
+        
+        <section>
+            <h2>Component-Based Message Alerting</h2>
+            <h1>TODO: Diagram</h1>
+        </section>
+        
+        
+        <section>
+            <h2>Challenges</h2>
+            <p>Brittle</p>
+            <p>Noise</p>
+            <p>Email == Spam</p>
+            <p>More Complex! :-(</p>
+        </section>
+        
+        
+        <section>
+            <small><pre><code data-trim="true">
+                [null]1 message failed for "DEFAULT_ALERTRULE" on "MMG_SAPERP_PRD010" {
+"Component": "MMG_SAPERP_PRD010",
+"ErrCat": "Application",
+"ErrCode": "ABAP.APPLICATION_ERROR",
+"ErrLabel": "2000",
+"ErrParams": {},
+"ErrText": "Application has thrown an exception",
+"FromParty": "",
+"FromService": "SUNGARD_AVANTGARD_PRD",
+"Interface": "AccountingDocumentAvantGardTreasuryJournalBulkCreateRequest_In",
+"MonitoringUrl": "http://host:port/sap/bc/gui/sap/its/webgui/SE61_DISPTXT?~transaction=*SXI_SHOW_MESSAGE%20MSGGUID=56D34B27536511E4B7A700000C5922FA",
+"MsgId": "56D34B27536511E4B7A700000C5922FA",
+"Namespace": "http://mmg.com/p2m/sap_appl",
+"RuleId": "d42a9af9fdc53609843f5a1d9f211911",
+"Timestamp": "2014-10-14T05:45:54Z",
+"ToParty": "",
+"ToService": "MMG_SAPERP_PRD010"
+}
+            </code></pre></small>
+        </section>
+        
+    </section>
+    
+    <section title="custom alerting">
+        
+        <section data-background="img/Workshop.jpg">
+            <!-- Image courtesy of mtneer_man (https://www.flickr.com/photos/mtneer_man/9207168553) -->
+            <h1>Custom Build!</h1>
+        </section>
+        
+        
+        <section data-background="img/PokerChipDispenser.jpg">
+            <!-- Photo by Patents Wall Art (https://www.flickr.com/photos/patentswallart/16260753854) -->
+            <p> </p>
+        </section>
+
+        
+        <section>
+            <h2>Aims</h2>
             <p>Simple</p>
-            <p style="text-decoration: line-through; color: grey;">Email</p>
-            <p style="text-decoration: line-through; color: grey;">Noise</p>
+            <p style="text-decoration: line-through;">Manual monitoring</p>
+            <p style="text-decoration: line-through;">Email</p>
+            <p style="text-decoration: line-through;">Noise</p>
         </section>
+
         
         <section>
-            
+            <h3 style="text-decoration: line-through;">Email</h3>
+            <img src="img/slack_rgb.png" style="border: none; background: none; box-shadow: none;"/>
+            <!-- Hey Slack team; Sorry for mod'ing your logo but I wanted a colourful # with white text :-) -->
+        </section>
+        
+        
+        <section>
+            <h3>Benefits</h3>
+            <p>Chat</p>
+            <p>Mobile app &amp; push notifications</p>
+            <p>Searchable history</p>
+            <p>Freemium</p>
         </section>
         
         
         <section>
             <h3>Initial Design</h3>
-            <em>Insert Diagram here</em>
+            <h1>TODO: Insert Diagram here</h1>
+        </section>
+        
+        
+        <section>
+            <img src="img/DirectToSlack.png"/>
+        </section>
+        
+        
+        <section data-background="img/Pulse.jpg">
+            <h3>Challenges</h3>
+            <p>Difficult to keep track</p>
+            <p>Who watches the watcher?</p>
+        </section>
+        
+        
+        <section>
+            <h2>OpsGenie</h2>
+            <img src="img/OpsGenieLogo.png" style="border: none; background: white;"></img>
+        </section>
+        
+        
+        <section>
+            <h3>Design</h3>
+            <h1>TODO: Insert Diagram</h1>
+        </section>
+        
+        
+        <section>
+            <img src="img/SlackExample.png"/>
+        </section>
+        
+        
+        <section>
+            <h3>Benefits</h3>
+            <p>Issue tracking</p>
+            <p>De-duplication</p>
+            <p>On-call rosters</p>
+            <p>Eliminated manual monitoring</p>
         </section>
         
         
