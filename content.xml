@@ -1,11 +1,11 @@
 <div class="slides" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     
-    <section>
-        <section title="cover">
-            <h1>Trying to be Boring</h1>
+    <section title="cover">
+        <section>
+            <h1>Modern Process Orchestration</h1>
             <h3>SAUG Melbourne Conference Nov. 2015</h3>
             <p>
-                <small><a href="http://about.sufw.me">Sascha Wenninger</a> (<a href="http://twitter.com/sufw">@sufw</a>)</small>
+                <small><a href="http://about.sufw.me">Sascha Wenninger</a> (<a href="https://twitter.com/sufw">@sufw</a>)</small>
             </p>
             <img src="img/Blue_T_3D.png" height="120px" style="border: none;"/>
             <img src="img/SAUG.png" height="120px" style="border: none;"/>
@@ -14,7 +14,7 @@
         
         <section>
             <p>This presentation is online:</p>
-            <p><a href="http://slides.BlueT.com.au/lean-integration">http://slides.BlueT.com.au/lean-integration</a></p>
+            <p><a href="http://slides.BlueT.com.au/saug2015po">http://slides.BlueT.com.au/saug2015po</a></p>
             <img src="img/CC-SA.png" style="border: none; background: none; box-shadow: none;"/>
         </section>
     </section>
@@ -23,7 +23,10 @@
     
     <section title="about me">
         <h2>About Me</h2>
-        <h1>TODO: this</h1>
+        <!--<h1>TODO: this</h1>-->
+        <p>Integration guy</p>
+        <p>Member of <a href="http://www.BlueT.com.au">Blue T</a></p>
+        <p>SAP Mentor and <a href="https://twitter.com/sufw">tweeter</a></p>
     </section>
     
     
@@ -99,7 +102,7 @@
         
         
         <section>
-            <iframe src="/Status%20Report%20for%20Payment%20Request%20Example.htm" width="95%" height="90%" style="background: white;"></iframe>
+            <iframe src="Status%20Report%20for%20Payment%20Request%20Example.htm" width="95%" height="90%" style="background: white;"></iframe>
         </section>
     </section>
     
@@ -619,10 +622,37 @@
             <p>Issue tracking</p>
             <p>De-duplication</p>
             <p>On-call rosters</p>
-            <p>Eliminated manual monitoring</p>
+            <p>Cheap</p>
+            <p><strong>Eliminated manual monitoring</strong></p>
         </section>
         
         
+        <section data-background="img/PokerChipDispenser.jpg">
+            <!-- Photo by Patents Wall Art (https://www.flickr.com/photos/patentswallart/16260753854) -->
+            <h2>Gotta Spend 'Em Sometimes!</h2>
+            
+        </section>
+        
+        
+<!--        <section>
+            <h1>TODO: Finish this</h1>
+            <h2>If you like this...</h2>
+            <p>Try it in your PO system!</p>
+            
+        </section>-->
+        
+        
     </section>  
+    
+    <section>
+        <h1>Thank You!</h1>
+        <br/>
+        <p>Find this presentation at<br/> <em>http://slides.BlueT.com.au/saug2015po</em></p>
+        <br/>
+        <p>sascha@BlueT.com.au</p>
+        <p>+61 403 933 472</p>					
+        <p>@sufw</p>
+        <a href="http://www.bluet.com.au" target="_new"><img style="border: none;" width="200" height="71" src="img/Blue_T_3D.png" alt="Blue T Logo"/></a>
+    </section>
     
 </div>
