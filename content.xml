@@ -442,11 +442,10 @@
         
         
         <section>
-            <h3>It's a Problem...</h3>
             <div style="display: inline-block;">
-                <img src="img/MonitoringBigIssue.png"/>
+                <img src="img/MonitoringBigIssue.png" style="border: none; background: none; box-shadow: none;"/>
                 <div>
-                    <span class="attribution"><small>Source: <a href="http://scn.sap.com/community/process-orchestration/blog/2015/10/28/results-of-the-global-survey-for-sap-process-integration-part-1-of-2">IFG for PI Annual Survey</a></small></span>
+                    <p>"Monitoring is Still a Big Issue" - <a href="http://scn.sap.com/community/process-orchestration/blog/2015/10/28/results-of-the-global-survey-for-sap-process-integration-part-1-of-2">IFG for PI Survey</a></p>
                 </div>
             </div>
             
@@ -491,7 +490,7 @@
         
         <section>
             <h2>Alert Framework</h2>
-            <h1>TODO: Diagram</h1>
+            <img src="img/Alerting_AF.png" style="border: none; background: none; box-shadow: none;"/>
         </section>
         
         
@@ -504,8 +503,8 @@
         
         
         <section>
-            <h2>Component-Based Message Alerting</h2>
-            <h1>TODO: Diagram</h1>
+            <h2>CBMA</h2>
+            <img src="img/Alerting_CBMA.png" style="border: none; background: none; box-shadow: none;"/>
         </section>
         
         
@@ -584,7 +583,7 @@
         
         <section>
             <h3>Initial Design</h3>
-            <h1>TODO: Insert Diagram here</h1>
+            <img src="img/Alerting_SlackOnly.png" style="border: none; background: none; box-shadow: none;"/>
         </section>
         
         
@@ -601,14 +600,13 @@
         
         
         <section>
-            <h2>OpsGenie</h2>
             <img src="img/OpsGenieLogo.png" style="border: none; background: white;"></img>
         </section>
         
         
         <section>
             <h3>Design</h3>
-            <h1>TODO: Insert Diagram</h1>
+            <img src="img/Alerting_OpsGenie.png" style="border: none; background: none; box-shadow: none;"/>
         </section>
         
         
