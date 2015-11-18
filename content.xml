@@ -1,28 +1,32 @@
 <div class="slides" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    
+
     <section title="cover">
         <section>
             <h1>Modern Process Orchestration</h1>
             <h3>SAUG Melbourne Conference Nov. 2015</h3>
             <p>
-                <small><a href="http://about.sufw.me">Sascha Wenninger</a> (<a href="https://twitter.com/sufw">@sufw</a>)</small>
+                <small><a href="http://about.sufw.me">Sascha Wenninger</a> (<a
+                        href="https://twitter.com/sufw">@sufw</a>)</small>
             </p>
             <img src="img/Blue_T_3D.png" height="120px" style="border: none;"/>
             <img src="img/SAUG.png" height="120px" style="border: none;"/>
         </section>
-        
-        
+
+
         <section>
             <p>This presentation is online:</p>
-            <p><a href="http://slides.BlueT.com.au/saug2015po">http://slides.BlueT.com.au/saug2015po</a></p>
+            <p>
+                <a href="http://slides.BlueT.com.au/saug2015po"
+                    >http://slides.BlueT.com.au/saug2015po</a>
+            </p>
             <img src="img/CC-SA.png" style="border: none; background: none; box-shadow: none;"/>
         </section>
     </section>
-    
-    
-    
+
+
+
     <section title="about me">
-        
+
         <div style="float: left; width: 50%;">
             <h2>About Me</h2>
             <div style="text-align: left;">
@@ -34,19 +38,20 @@
         </div>
 
         <div style="width: 50%; float: right;">
-            <img src="img/Burger.jpg" style="border: none; background: none; box-shadow: none; float: bottom;"/>
+            <img src="img/Burger.jpg"
+                style="border: none; background: none; box-shadow: none; float: bottom;"/>
         </div>
     </section>
-    
-    
-    
+
+
+
     <section title="context">
         <section data-background="img/CopperOre.jpg">
             <!-- Image thanks to timothy.actwell (https://www.flickr.com/photos/timothyactwell/3832070288) -->
-            <h1>Context</h1>    
+            <h1>Context</h1>
         </section>
-        
-        
+
+
         <section>
             <h2>MMG</h2>
             <p>Growing, mid-sized global mining company</p>
@@ -54,14 +59,14 @@
             <p>Some very important interfaces</p>
             <p>Small team: efficiency &amp; skills</p>
         </section>
-        
-        
+
+
         <section>
             <h3>Challenges</h3>
             <p>Balance</p>
         </section>
-        
-        
+
+
         <section>
             <table>
                 <tr>
@@ -81,48 +86,53 @@
                 </tr>
             </table>
         </section>
-        
+
     </section>
-    
-    
+
+
     <section title="ideas">
         <section data-background="img/Lightbulb.jpg">
-            <h1 style="color: black;">Some Ideas</h1> 
+            <h1 style="color: black;">Some Ideas</h1>
         </section>
-        
-        
+
+
         <section>
             <h2>Innovation Tokens</h2>
-            <p>"<a href="http://mcfunley.com/choose-boring-technology-slides">Choose Boring Tech</a>"</p>
-            <p><strong>Boring &#8800; Bad</strong></p>
+            <p>"<a href="http://mcfunley.com/choose-boring-technology-slides">Choose Boring
+                Tech</a>"</p>
+            <p>
+                <strong>Boring &#8800; Bad</strong>
+            </p>
             <div class="fragment">
                 <p>Use new/unproven tech only where it matters</p>
                 <p>Optimise Globally (Architecture! &#9786;)</p>
-                <p>You should really <a href="http://mcfunley.com/choose-boring-technology-slides">read this!</a></p>
+                <p>You should really <a href="http://mcfunley.com/choose-boring-technology-slides"
+                        >read this!</a></p>
             </div>
         </section>
-        
-        
+
+
         <section>
             <h2>DevOps</h2>
             <p>One team.</p>
             <p>Dev to improve Ops</p>
             <p>Ops Experience to improve Dev</p>
         </section>
-        
-        
+
+
         <section>
-            <iframe src="Status%20Report%20for%20Payment%20Request%20Example.htm" width="100%" height="600px" style="background: white;"></iframe>
+            <iframe src="Status%20Report%20for%20Payment%20Request%20Example.htm" width="100%"
+                height="600px" style="background: white;"/>
         </section>
     </section>
-    
-    
+
+
     <section title="mappings">
         <!-- Image thanks to James (https://www.flickr.com/photos/18928073@N00/2091539789) -->
         <section data-background="img/WiringDiagram.jpg">
             <h1>Mappings</h1>
         </section>
-        
+
         <section>
             <h2>Graphical Mapping</h2>
             <ul>
@@ -131,56 +141,64 @@
                 <li>Looks Simple</li>
             </ul>
         </section>
-        
+
         <section>
             <div style="display: inline-block;">
-                <img src="img/GraphicalMapping.png"/>
+                <img src="img/GraphicalMapping.png" style="width: 100%;"/>
                 <div>
-                    <span class="attribution"><small>Image courtesy of <a href="http://www.figaf.com">Daniel Graversen</a></small></span>
+                    <span class="attribution">
+                        <small>Image courtesy of <a href="http://www.figaf.com">Daniel
+                            Graversen</a></small>
+                    </span>
                 </div>
             </div>
         </section>
-        
+
         <section>
             <div style="display: inline-block;">
-                <img src="img/GraphicalMapping_OMG.png"/>
+                <img src="img/GraphicalMapping_OMG.png" style="width: 100%;"/>
                 <div>
-                    <span class="attribution"><small>Image courtesy of <a href="https://twitter.com/js1972/status/593612667060785152">Jason Scott</a></small></span>
+                    <span class="attribution">
+                        <small>Image courtesy of <a
+                                href="https://twitter.com/js1972/status/593612667060785152">Jason
+                                Scott</a></small>
+                    </span>
                 </div>
             </div>
-            
+
         </section>
-        
+
         <section data-background="img/GraphicalMapping_dark.png">
             <p>However...</p>
             <ul>
                 <li>Gets unwieldy, quickly</li>
-                <li>Not documentable without <a href="http://figaf.com/services/pi-documenter/">other tools</a></li>
+                <li>Not documentable without <a href="http://figaf.com/services/pi-documenter/"
+                        >other tools</a></li>
                 <li>Context-Hell is always near</li>
             </ul>
         </section>
-        
+
         <section>
             <h1>XSLT</h1>
         </section>
-        
+
         <section>
             <h3>Portable</h3>
             <p>Standard language</p>
             <p>Used by most middleware systems</p>
             <p>Collaboration! :-)</p>
         </section>
-        
+
         <section>
             <h3>Documentable</h3>
             <img src="img/XSLTcomments.png"/>
         </section>
-        
+
         <section>
             <h3>Tools: Debug!</h3>
             <img src="img/OxygenDebugger.png"/>
         </section>
-        
+
         <section>
             <h3>Tools: Unit Tests</h3>
             <p>e.g. using <a href="http://www.jenitennison.com/xslt/xspec">XSpec</a></p>
@@ -190,7 +208,7 @@
                 <li>Expected XML output</li>
             </ul>
         </section>
-        
+
         <section>
             <pre><code class="hlxml" data-trim="true">
 <scenario label="Removal of ZYFC rate type in a mixed message">
@@ -218,11 +236,11 @@
 </scenario>
             </code></pre>
         </section>
-   
-        
+
+
         <section>
             <pre><code class="hlxml" data-trim="true">
-<expect label="No ZYFC rate types left" test="count(//p2m:exchangerate[p2m:ratetype = 'ZYFC']) = 0"></expect>
+<expect label="No ZYFC rate types left" test="count(//p2m:exchangerate[p2m:ratetype = 'ZYFC']) = 0"/>
 
 <expect label="Checking against complete XML">
     <ExchangeRateReplicationRequestMessage xmlns="http://mmg.com/schemas/p2m" xmlns:prx="urn:sap.com:proxy:ECP:/1SAI/TAS5CA488983C567A6B30CB:731">
@@ -247,51 +265,58 @@
 </expect>
             </code></pre>
         </section>
-        
-        
+
+
         <section>
-            <img src="img/UnitTestResults.png"></img>
-            <p><small><a href="https://www.youtube.com/watch?v=iPOntyq6JiE">Watch a Demo </a> by the creator <a href="http://www.jenitennison.com">Jeni T</a></small></p>
+            <img src="img/UnitTestResults.png"/>
+            <p>
+                <small><a href="https://www.youtube.com/watch?v=iPOntyq6JiE">Watch a Demo </a> by
+                    the creator <a href="http://www.jenitennison.com">Jeni T</a></small>
+            </p>
         </section>
-        
-        
+
+
         <section>
             <h3>Tools: <a href="http://stackoverflow.com/search?q=xslt">StackOverflow</a></h3>
             <div style="display: inline-block;">
                 <img src="img/GeekPokeStackOverflow.png"/>
                 <div>
-                    <span class="attribution"><small>Image courtesy of <a href="http://geek-and-poke.com/geekandpoke/2013/1/22/stackoverflow.html">Geek &amp; Poke</a></small></span>
+                    <span class="attribution">
+                        <small>Image courtesy of <a
+                                href="http://geek-and-poke.com/geekandpoke/2013/1/22/stackoverflow.html"
+                                >Geek &amp; Poke</a></small>
+                    </span>
                 </div>
             </div>
         </section>
-        
-        
+
+
         <section>
             <h3>Performance</h3>
             <p>In <em>most</em> cases a non-issue</p>
             <p><em>Used</em> to be dicey before 7.10</p>
             <p>AusPost's "POSLog" interface used only XSLT for 1m+ messages/day</p>
         </section>
-        
-        
+
+
         <section>
             <h2>Challenges</h2>
         </section>
-        
-        
+
+
         <section data-background="img/TheScream.jpg">
             <!-- Image thanks to Wikipedia (https://en.wikipedia.org/wiki/The_Scream#/media/File:The_Scream.jpg) -->
             <h2>Grouping: The Muenchian Method</h2>
         </section>
-        
-        
+
+
         <section>
             <table>
                 <thead>
                     <tr>
                         <th>First Name</th>
                         <th>Last Name</th>
-                        <th width="100px"></th>
+                        <th width="100px"/>
                         <th>Last Name</th>
                         <th>First Name</th>
                     </tr>
@@ -300,60 +325,64 @@
                     <tr>
                         <td>Marie</td>
                         <td>Curie</td>
-                        <td rowspan="3"></td>
+                        <td rowspan="3"/>
                         <td>Becquerel</td>
                         <td>Henri</td>
                     </tr>
                     <tr>
                         <td>Henri</td>
                         <td>Becquerel</td>
-                        
+
                         <td rowspan="2">Curie</td>
                         <td>Marie</td>
                     </tr>
                     <tr>
                         <td>Pierre</td>
                         <td>Curie</td>
-                        
-                        
+
+
                         <td>Pierre</td>
                     </tr>
-                    <tr>
-                        
-                    </tr>
+                    <tr> </tr>
                 </tbody>
             </table>
             <p>Basically the GROUP BY clause in SQL...</p>
         </section>
-        
-        
+
+
         <section>
             <h3>XSLT 1.0</h3>
             <pre><code class="hlxml" data-trim="true">
-<xsl:key name="scientists-by-lastname" match="scientist" use="lastname" />
+<xsl:key name="scientists-by-lastname" match="scientist" use="lastname"/>
 <xsl:template match="records">
     <xsl:for-each select="scientist[count(. | key('scientists-by-lastname', lastname)[1]) = 1]">
-        <xsl:sort select="lastname" />
-        <xsl:value-of select="lastname" />,<br />
+        <xsl:sort select="lastname"/>
+        <xsl:value-of select="lastname"/>,<br/>
         <xsl:for-each select="key('scientists-by-lastname', lastname)">
-            <xsl:sort select="firstname" />
-            <xsl:value-of select="firstname" /><br />
+            <xsl:sort select="firstname"/>
+            <xsl:value-of select="firstname"/><br/>
         </xsl:for-each>
     </xsl:for-each>
 </xsl:template>
             </code></pre>
-            <span class="attribution"><small>Adapted from <a href="http://www.jenitennison.com/xslt/grouping/muenchian.html">template solution</a> by Jeni T.</small></span>
+            <span class="attribution">
+                <small>Adapted from <a
+                        href="http://www.jenitennison.com/xslt/grouping/muenchian.html">template
+                        solution</a> by Jeni T.</small>
+            </span>
         </section>
-        
-        
+
+
         <section>
             <h2>XSLT 2.0</h2>
             <p>Makes many things <em>much</em> simpler!</p>
-            <p>Supported in a <a href="http://scn.sap.com/community/pi-and-soa-middleware/blog/2014/10/14/how-to-import-and-use-xslt-20-mappings-in-sap-pipo">limited</a> way from PI 7.31 SP11</p>
+            <p>Supported in a <a
+                    href="http://scn.sap.com/community/pi-and-soa-middleware/blog/2014/10/14/how-to-import-and-use-xslt-20-mappings-in-sap-pipo"
+                    >limited</a> way from PI 7.31 SP11</p>
             <p>Alternative: Java wrapper.</p>
         </section>
-        
-        
+
+
         <section>
             <h3>XSLT 2.0</h3>
             <pre><code class="hlxml" data-trim="true">
@@ -363,24 +392,24 @@
             </code></pre>
             <p>And lots of other improvements...</p>
         </section>
-        
-        
+
+
         <section>
             <h3>XSLT 2.0</h3>
             <p>Now supported in 7.31 and later!</p>
         </section>
-        
-        
+
+
     </section>
-    
-    
-    
+
+
+
     <section title="source control">
         <section data-background="img/Evolution.jpg">
             <h1>Source Control</h1>
             <!-- Image thanks to spykster (https://www.flickr.com/photos/spykster/7625762720) -->
         </section>
-        
+
         <section>
             <p>Needed a way to address shortcomings of the ESR:</p>
             <ul>
@@ -389,105 +418,118 @@
                 <li>non-code artefacts (e.g. scripts)</li>
             </ul>
         </section>
-        
+
         <section>
-            <img src="img/GitHubBrandMark.png" style="border: none; background:none; box-shadow: none;"/>
+            <img src="img/GitHubBrandMark.png"
+                style="border: none; background:none; box-shadow: none;"/>
         </section>
-        
+
         <section>
             <div style="display: inline-block;">
                 <img src="img/xkcd1597.png"/>
-                <div><span class="attribution"><small>Image courtesy of <a href="http://xkcd.com/1597/">xkcd</a></small></span></div>
+                <div>
+                    <span class="attribution">
+                        <small>Image courtesy of <a href="http://xkcd.com/1597/">xkcd</a></small>
+                    </span>
+                </div>
             </div>
         </section>
-        
+
         <section>
             <h3>Started simple</h3>
             <p>Initial learning curve</p>
             <p>Discipline required</p>
         </section>
-        
+
         <section>
             <img src="img/Commits.png" style="border: none;"/>
         </section>
-        
+
         <section>
-            <img src="img/Github_Trunk.png" style="border: none; background: none; box-shadow: none;"/>
+            <img src="img/Github_Trunk.png"
+                style="border: none; background: none; box-shadow: none;"/>
         </section>
-        
+
         <section>
             <img src="img/austin_powers.jpg" style="border: none;"/>
         </section>
-        
+
         <section>
             <h3>Be Polite: Pull Requests</h3>
-            <img src="img/Github_Branch.png" style="border: none; background: none; box-shadow: none;"/>
+            <img src="img/Github_Branch.png"
+                style="border: none; background: none; box-shadow: none;"/>
         </section>
-        
+
         <section>
             <h3>Possibilities</h3>
             <p>Code reviews before merging into master</p>
             <p>Offshore development: Only trusted devs have merge rights</p>
             <p>Avoid edit conflicts</p>
         </section>
-        
+
         <section>
             <h3>What's Next?</h3>
             <div style="display: inline-block;">
                 <a href="https://www.review.ninja/">
-                    <img src="img/ReviewNinjaGirl.png" style="border: none; background:none; box-shadow: none;"/>
+                    <img src="img/ReviewNinjaGirl.png"
+                        style="border: none; background:none; box-shadow: none;"/>
                 </a>
-                <div><p>An <a href="https://www.review.ninja/">SAP tool</a> for Github code review!</p></div>
+                <div>
+                    <p>An <a href="https://www.review.ninja/">SAP tool</a> for Github code
+                        review!</p>
+                </div>
             </div>
-            
+
         </section>
     </section>
-    
+
 
 
     <section title="alerting">
         <section data-background="img/SafetyFirst.jpg">
             <h1>Alerting</h1>
         </section>
-        
-        
+
+
         <section>
             <div style="display: inline-block;">
-                <img src="img/MonitoringBigIssue.png" style="border: none; background: none; box-shadow: none;"/>
+                <img src="img/MonitoringBigIssue.png"
+                    style="border: none; background: none; box-shadow: none;" height="500px"/>
                 <div>
-                    <p>"Monitoring is Still a Big Issue" - <a href="http://scn.sap.com/community/process-orchestration/blog/2015/10/28/results-of-the-global-survey-for-sap-process-integration-part-1-of-2">IFG for PI Survey</a></p>
+                    <p>"Monitoring is Still a Big Issue" - <a
+                            href="http://scn.sap.com/community/process-orchestration/blog/2015/10/28/results-of-the-global-survey-for-sap-process-integration-part-1-of-2"
+                            >IFG for PI Survey</a></p>
                 </div>
             </div>
-            
+
         </section>
-        
-        
+
+
         <section>
             <h2>SAP Standard</h2>
             <p>Traditional Alert Framework</p>
             <p>Since 7.3: also Component-Based Message Alerting &amp; SolMan</p>
         </section>
-        
-        
+
+
         <section>
             <p>Difficult to set up; <em>very</em> sparse documentation</p>
             <p>SolMan as central monitor, polls other systems for alerts</p>
             <p>Lots of noise &amp; false positives</p>
         </section>
-        
-        
+
+
         <section>
             <h3>IFG Survey</h3>
             <p>25% adoption</p>
-            <p>Barriers: 
-                <ol>
+            <p>Barriers: <ol>
                     <li>20%: org issues</li>
                     <li>15%: lack of skills</li>
                 </ol>
             </p>
         </section>
-        
-        
+
+
         <section>
             <h2>MMG's Journey</h2>
             <p>Alert Framework</p>
@@ -496,28 +538,30 @@
             <p style="-ms-transform: rotate(180deg); transform: rotate(180deg);">⇧</p>
             <p>Custom Solution</p>
         </section>
-        
-        
+
+
         <section>
             <h2>Alert Framework</h2>
-            <img src="img/Alerting_AF.png" style="border: none; background: none; box-shadow: none;"/>
+            <img src="img/Alerting_AF.png" style="border: none; background: none; box-shadow: none;"
+            />
         </section>
-        
-        
+
+
         <section>
             <h2>Challenges</h2>
             <p>Brittle</p>
             <p>Noise</p>
             <p>Email == Spam</p>
         </section>
-        
-        
+
+
         <section>
             <h2>CBMA</h2>
-            <img src="img/Alerting_CBMA.png" style="border: none; background: none; box-shadow: none;"/>
+            <img src="img/Alerting_CBMA.png"
+                style="border: none; background: none; box-shadow: none;"/>
         </section>
-        
-        
+
+
         <section>
             <h2>Challenges</h2>
             <p>Brittle</p>
@@ -525,10 +569,11 @@
             <p>Email == Spam</p>
             <p>More Complex! :-(</p>
         </section>
-        
-        
+
+
         <section>
-            <small><pre><code data-trim="true">
+            <small>
+                <pre><code data-trim="true">
                 [null]1 message failed for "DEFAULT_ALERTRULE" on "MMG_SAPERP_PRD010" {
 "Component": "MMG_SAPERP_PRD010",
 "ErrCat": "Application",
@@ -547,25 +592,26 @@
 "ToParty": "",
 "ToService": "MMG_SAPERP_PRD010"
 }
-            </code></pre></small>
+            </code></pre>
+            </small>
         </section>
-        
+
     </section>
-    
+
     <section title="custom alerting">
-        
+
         <section data-background="img/Workshop.jpg">
             <!-- Image courtesy of mtneer_man (https://www.flickr.com/photos/mtneer_man/9207168553) -->
             <h1>Custom Build!</h1>
         </section>
-        
-        
+
+
         <section data-background="img/PokerChipDispenser.jpg">
             <!-- Photo by Patents Wall Art (https://www.flickr.com/photos/patentswallart/16260753854) -->
             <p> </p>
         </section>
 
-        
+
         <section>
             <h2>Aims</h2>
             <p>Simple</p>
@@ -574,14 +620,14 @@
             <p style="text-decoration: line-through;">Noise</p>
         </section>
 
-        
+
         <section>
             <h3 style="text-decoration: line-through;">Email</h3>
             <img src="img/slack_rgb.png" style="border: none; background: none; box-shadow: none;"/>
             <!-- Hey Slack team; Sorry for mod'ing your logo but I wanted a colourful # with white text :-) -->
         </section>
-        
-        
+
+
         <section>
             <h3>Benefits</h3>
             <p>Chat</p>
@@ -589,77 +635,87 @@
             <p>Searchable history</p>
             <p>Freemium</p>
         </section>
-        
-        
+
+
         <section>
             <h3>Initial Design</h3>
-            <img src="img/Alerting_SlackOnly.png" style="border: none; background: none; box-shadow: none;"/>
+            <img src="img/Alerting_SlackOnly.png"
+                style="border: none; background: none; box-shadow: none;"/>
         </section>
-        
-        
+
+
         <section>
             <img src="img/DirectToSlack.png"/>
         </section>
-        
-        
+
+
         <section data-background="img/Pulse.jpg">
             <h3>Challenges</h3>
             <p>Difficult to keep track</p>
             <p>Who watches the watcher?</p>
         </section>
-        
-        
+
+
         <section>
-            <img src="img/OpsGenieLogo.png" style="border: none; background: white;"></img>
+            <img src="img/OpsGenieLogo.png"
+                style="border: none; background: none; box-shadow: none;"/>
         </section>
-        
-        
+
+
         <section>
             <h3>Design</h3>
-            <img src="img/Alerting_OpsGenie.png" style="border: none; background: none; box-shadow: none;"/>
+            <img src="img/Alerting_OpsGenie.png"
+                style="border: none; background: none; box-shadow: none;"/>
         </section>
-        
-        
+
+
         <section>
             <img src="img/SlackExample.png"/>
         </section>
-        
-        
+
+
         <section>
             <h3>Benefits</h3>
             <p>Issue tracking</p>
             <p>De-duplication</p>
             <p>On-call rosters</p>
             <p>Cheap</p>
-            <p><strong>Eliminated manual monitoring</strong></p>
+            <p>
+                <strong>Eliminated manual monitoring</strong>
+            </p>
         </section>
-        
-        
+
+
         <section data-background="img/PokerChipDispenser.jpg">
             <!-- Photo by Patents Wall Art (https://www.flickr.com/photos/patentswallart/16260753854) -->
             <h2>Gotta Spend 'Em Sometimes!</h2>
-            
+
         </section>
-        
-        
+
+
         <section>
             <h2>Try it yourself!</h2>
-            <p>With a <a href="https://gist.github.com/sufw/bd4bb9b414a4c89b0623">simple XSLT</a> to transform CBMA alerts to OpsGenie API messages.</p>
-            
+            <p>With a <a href="https://gist.github.com/sufw/bd4bb9b414a4c89b0623">simple XSLT</a> to
+                transform CBMA alerts to OpsGenie API messages.</p>
+
         </section>
-        
-        
-    </section>  
-    
+
+
+    </section>
+
     <section>
         <h1>Thank You!</h1>
         <br/>
-        <p>Find this presentation at<br/> <em>http://slides.BlueT.com.au/saug2015po</em></p>
+        <p>Find this presentation at<br/>
+            <em>http://slides.BlueT.com.au/saug2015po</em></p>
         <br/>
         <p>sascha@BlueT.com.au</p>
-        <p>+61 403 933 472</p>					
+        <p>+61 403 933 472</p>
         <p>@sufw</p>
-        <a href="http://www.bluet.com.au" target="_new"><img style="border: none;" width="200" height="71" src="img/Blue_T_3D.png" alt="Blue T Logo"/></a>
+        <a href="http://www.bluet.com.au" target="_new">
+            <img style="border: none;" width="200" height="71" src="img/Blue_T_3D.png"
+                alt="Blue T Logo"/>
+        </a>
     </section>
-    
+
 </div>
