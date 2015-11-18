@@ -642,12 +642,11 @@
         </section>
         
         
-<!--        <section>
-            <h1>TODO: Finish this</h1>
-            <h2>If you like this...</h2>
-            <p>Try it in your PO system!</p>
+        <section>
+            <h2>Try it yourself!</h2>
+            <p>With a <a href="https://gist.github.com/sufw/bd4bb9b414a4c89b0623">simple XSLT</a> to transform CBMA alerts to OpsGenie API messages.</p>
             
-        </section>-->
+        </section>
         
         
     </section>  
