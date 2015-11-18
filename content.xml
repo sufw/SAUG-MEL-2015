@@ -22,12 +22,22 @@
     
     
     <section title="about me">
-        <h2>About Me</h2>
-        <!--<h1>TODO: this</h1>-->
-        <p>Integration guy</p>
-        <p>Member of <a href="http://www.BlueT.com.au">Blue T</a></p>
-        <p>SAP Mentor and <a href="https://twitter.com/sufw">tweeter</a></p>
+        
+        <div style="float: left; width: 50%;">
+            <h2>About Me</h2>
+            <div style="text-align: left;">
+                <p>Integration guy</p>
+                <p>Member of <a href="http://www.BlueT.com.au">Blue T</a></p>
+                <p>SAP Mentor and <a href="https://twitter.com/sufw">tweeter</a></p>
+                <p>Burger aficionado</p>
+            </div>
+        </div>
+
+        <div style="width: 50%; float: right;">
+            <img src="img/Burger.jpg" style="border: none; background: none; box-shadow: none; float: bottom;"/>
+        </div>
     </section>
+    
     
     
     <section title="context">
